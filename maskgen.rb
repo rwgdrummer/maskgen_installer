@@ -11,10 +11,7 @@ class Maskgen < Formula
   depends_on "git"
 
   def install
-    ENV.prepend_path "PATH", Formula["python@2"].opt_libexec/"bin"
-    mkdir "build" do   
-      system "git", "clone", "https://github.com/rwgdrummer/maskgen_installer.git"
-    end
+     bin.install "jtinstall"
   end
 
   test do
